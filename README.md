@@ -14,7 +14,7 @@ $ docker pull zrrrzzt/docker-unoconv-webservice
 $ docker build -t docker-unoconv-webservice .
 ```
 
-# Run
+# Run - example
 ```sh
 $ docker run -d -p 80:3000 --name unoconv docker-unoconv-webservice
 ```
@@ -25,7 +25,7 @@ or if you use the pre-build version
 $ docker run -d -p 80:3000 --name unoconv zrrrzzt/docker-unoconv-webservice
 ```
 
-# Uages
+# Usage
 
 Post the file you want to convert to the server and get the converted file in return.
 
