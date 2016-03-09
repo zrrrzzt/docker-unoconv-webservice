@@ -4,23 +4,16 @@
 # Inspired by https://hub.docker.com/r/pataquets/unoconv/
 ###########################################################
 
-# Setting the base to iojs
-FROM iojs
+# Setting the base to nodejs 4.3.1
+FROM node:4.3.1-slim
 
 # Maintainer
 MAINTAINER Geir Gåsodden
 
 #### Begin setup ####
 
-# Installs unoconv
-RUN \
-	apt-get update && \
-	DEBIAN_FRONTEND=noninteractive \
-		apt-get install -y \
-			unoconv \
-	&& \
-	apt-get clean && \
-	rm -rf /var/lib/apt/lists/
+# Installs git and unoconv
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git unoconv && apt-get clean
 
 # Clone the repo
 RUN git clone https://github.com/zrrrzzt/tfk-api-unoconv.git unoconvservice
@@ -28,8 +21,15 @@ RUN git clone https://github.com/zrrrzzt/tfk-api-unoconv.git unoconvservice
 # Change working directory
 WORKDIR "/unoconvservice"
 
-# Run the setup script
-RUN npm run setup
+# Add uploads directory
+RUN mkdir uploads
+
+# Install dependencies
+RUN npm install --production
+
+# Env variables
+ENV SERVER_PORT 3000
+ENV PAYLOAD_MAX_SIZE 1048576
 
 # Expose 3000
 EXPOSE 3000
