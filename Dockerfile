@@ -4,8 +4,8 @@
 # Inspired by https://hub.docker.com/r/pataquets/unoconv/
 ###########################################################
 
-# Setting the base to nodejs 4.3.1
-FROM node:4.3.1-slim
+# Setting the base to nodejs 4.4.7
+FROM node:4.4.7-slim
 
 # Maintainer
 MAINTAINER Geir Gåsodden
@@ -35,4 +35,4 @@ ENV PAYLOAD_MAX_SIZE 1048576
 EXPOSE 3000
 
 # Startup
-ENTRYPOINT /usr/bin/unoconv --listener --server=0.0.0.0 --port=2002 && node standalone.js
+ENTRYPOINT /usr/bin/unoconv --listener --server=0.0.0.0 --port=2002 & node standalone.js
