@@ -4,8 +4,8 @@
 # Inspired by https://hub.docker.com/r/pataquets/unoconv/
 ###########################################################
 
-# Setting the base to nodejs 4.4.7
-FROM node:4.4.7-slim
+# Setting the base to nodejs 4.5.0
+FROM node:4.5.0-slim
 
 # Maintainer
 MAINTAINER Geir Gåsodden
@@ -20,9 +20,6 @@ RUN git clone https://github.com/zrrrzzt/tfk-api-unoconv.git unoconvservice
 
 # Change working directory
 WORKDIR "/unoconvservice"
-
-# Add uploads directory
-RUN mkdir uploads
 
 # Install dependencies
 RUN npm install --production
