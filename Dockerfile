@@ -4,8 +4,8 @@
 # Inspired by https://hub.docker.com/r/pataquets/unoconv/
 ###########################################################
 
-# Setting the base to nodejs 4.5.0
-FROM node:4.5.0-slim
+# Setting the base to nodejs 4.6.0
+FROM node:4.6.0-slim
 
 # Maintainer
 MAINTAINER Geir Gåsodden
