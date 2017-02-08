@@ -12,6 +12,9 @@ MAINTAINER Geir Gåsodden
 
 #### Begin setup ####
 
+# Add ubuntu source to upgrade new version of unoconv. Debian jessie still uses old version.
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu xenial main universe" >> /etc/apt/sources.list
+
 # Installs git and unoconv
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git unoconv && apt-get clean
 
