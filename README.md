@@ -60,3 +60,8 @@ Change it in the Dockerfile or create an env-file and load it at containerstart
 ```sh
 $ docker run --env-file=docker.env -d -p 80:3000 --name unoconv docker-unoconv-webservice
 ```
+
+## License
+[MIT](LICENSE)
+
+![alt text](https://robots.kebabstudios.party/docker-unoconv-webservice.png "Robohash image of docker-unoconv-webservice")

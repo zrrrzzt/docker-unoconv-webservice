@@ -4,16 +4,13 @@
 # Inspired by https://hub.docker.com/r/pataquets/unoconv/
 ###########################################################
 
-# Setting the base to nodejs 4.6.0
-FROM node:4.6.0-slim
+# Setting the base to nodejs 4.7.3
+FROM node:4.7.3-slim
 
 # Maintainer
 MAINTAINER Geir Gåsodden
 
 #### Begin setup ####
-
-# Add ubuntu source to upgrade new version of unoconv. Debian jessie still uses old version.
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu xenial main universe" >> /etc/apt/sources.list
 
 # Installs git and unoconv
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git unoconv && apt-get clean
@@ -22,7 +19,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git unoc
 RUN git clone https://github.com/zrrrzzt/tfk-api-unoconv.git unoconvservice
 
 # Change working directory
-WORKDIR "/unoconvservice"
+WORKDIR /unoconvservice
 
 # Install dependencies
 RUN npm install --production

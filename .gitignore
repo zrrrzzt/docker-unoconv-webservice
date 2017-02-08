@@ -1,7 +1,8 @@
 # IDE
 .idea
+.vscode
 
-# OS X
+# Mac OS
 .DS_Store
 
 # Logs
