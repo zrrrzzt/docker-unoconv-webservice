@@ -1,19 +1,14 @@
 ###########################################################
+#
 # Dockerfile for using unoconv through a webservice
 #
-# Inspired by https://hub.docker.com/r/pataquets/unoconv/
 ###########################################################
 
-# Setting the base to nodejs 4.7.3
-FROM node:4.7.3-slim
+# Setting the base to docker-node-unoconv
+FROM zrrrzzt/docker-node-unoconv:4.7.3
 
 # Maintainer
 MAINTAINER Geir Gåsodden
-
-#### Begin setup ####
-
-# Installs git and unoconv
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y git unoconv && apt-get clean
 
 # Clone the repo
 RUN git clone https://github.com/zrrrzzt/tfk-api-unoconv.git unoconvservice

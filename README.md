@@ -1,27 +1,28 @@
 # docker-unoconv-webservice
+
 Dockerimage to run unoconv as a webservice through [tfk-api-unoconv](https://github.com/zrrrzzt/tfk-api-unoconv).
 
 If you prefer a pre-build version it is available from [hub.docker.com](https://hub.docker.com/r/zrrrzzt/docker-unoconv-webservice)
 just do a regular pull
 
-```sh
+```bash
 $ docker pull zrrrzzt/docker-unoconv-webservice
 ```
 
 ## Build
 
-```sh
+```bash
 $ docker build -t docker-unoconv-webservice .
 ```
 
 ## Run - example
-```sh
+```bash
 $ docker run -d -p 80:3000 --name unoconv docker-unoconv-webservice
 ```
 
 or if you use the pre-build version
 
-```sh
+```bash
 $ docker run -d -p 80:3000 --name unoconv zrrrzzt/docker-unoconv-webservice
 ```
 
@@ -33,7 +34,7 @@ See all possible conversions on the [unoconv website](http://dag.wiee.rs/home-ma
 
 API for the webservice is /unoconv/{format-to-convert-to} so a docx to pdf would be
 
-```sh
+```bash
 $ curl --form file=@myfile.docx http://localhost/unoconv/pdf > myfile.pdf
 ```
 
@@ -57,7 +58,7 @@ PAYLOAD_MAX_SIZE default is 1048576 (1 MB)
 
 Change it in the Dockerfile or create an env-file and load it at containerstart
 
-```sh
+```bash
 $ docker run --env-file=docker.env -d -p 80:3000 --name unoconv docker-unoconv-webservice
 ```
 
