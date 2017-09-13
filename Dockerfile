@@ -1,11 +1,5 @@
-###########################################################
-#
-# Dockerfile for using unoconv through a webservice
-#
-###########################################################
-
 # Setting the base to docker-node-unoconv
-FROM zrrrzzt/docker-node-unoconv:4.7.3
+FROM telemark/docker-node-unoconv:8.5.0
 
 # Maintainer
 MAINTAINER Geir Gåsodden
