@@ -56,6 +56,10 @@ SERVER_PORT default is 3000
 
 PAYLOAD_MAX_SIZE default is 1048576 (1 MB)
 
+TIMEOUT_SERVER default is 2 minutes (120 000 milliseconds)
+
+TIMEOUT_SOCKET default is 2 minutes (120 000 milliseconds)
+
 Change it in the Dockerfile or create an env-file and load it at containerstart
 
 ```bash
