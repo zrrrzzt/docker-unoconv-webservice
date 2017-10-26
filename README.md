@@ -48,6 +48,18 @@ To see formats for a given type ```/unoconv/formats/{document|graphics|presentat
 
 To see all versions of unoconv and dependencies lookup ```/unoconv/versions```
 
+### Healthz
+
+Are we alive? ```/healthz```
+
+returns
+
+```JavaScript
+{
+  uptime: 18.849
+}
+```
+
 ## Environment
 
 You can change the webservice port and filesize-limit by changing environment variables.
