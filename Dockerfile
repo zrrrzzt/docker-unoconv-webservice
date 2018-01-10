@@ -1,8 +1,5 @@
 # Setting the base to docker-node-unoconv
-FROM telemark/docker-node-unoconv:8.8.1
-
-# Maintainer
-MAINTAINER Geir Gåsodden
+FROM telemark/docker-node-unoconv:8.9.4
 
 # Clone the repo
 RUN git clone https://github.com/zrrrzzt/tfk-api-unoconv.git unoconvservice
