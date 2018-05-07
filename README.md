@@ -81,4 +81,4 @@ $ docker run --env-file=docker.env -d -p 80:3000 --name unoconv docker-unoconv-w
 ## License
 [MIT](LICENSE)
 
-![alt text](https://robots.kebabstudios.party/docker-unoconv-webservice.png "Robohash image of docker-unoconv-webservice")
+![Robohash image of docker-unoconv-webservice](https://robots.kebabstudios.party/docker-unoconv-webservice.png "Robohash image of docker-unoconv-webservice")
