@@ -38,6 +38,8 @@ API for the webservice is /unoconv/{format-to-convert-to} so a docx to pdf would
 $ curl --form file=@myfile.docx http://localhost/unoconv/pdf > myfile.pdf
 ```
 
+For a basic example with upload via form take a look at the [browser-file-convert](https://github.com/nithinkashyapn/browser-file-convert) example from [nithinkashyapn](https://github.com/nithinkashyapn)
+
 ### Formats
 
 To see all possible formats for convertion visit ```/unoconv/formats```
@@ -80,5 +82,3 @@ $ docker run --env-file=docker.env -d -p 80:3000 --name unoconv docker-unoconv-w
 
 ## License
 [MIT](LICENSE)
-
-![Robohash image of docker-unoconv-webservice](https://robots.kebabstudios.party/docker-unoconv-webservice.png "Robohash image of docker-unoconv-webservice")
